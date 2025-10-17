@@ -2,127 +2,133 @@
 
 - app to be multi-lingual
 
-## Features
+## Main Features
 
-- user features
-  - create account (firstName, lastName, email, password)
-    - confirm user email (through email confirmation mail)
-  - login (email, password) + facebook login + captcha
-  - forgot password
-  - change password
-  - change email
-  - delete account
+### MainApp features
 
-- items management
-  - add/update/delete item
-  - only admin can create/update/delete items
-  - item reviews
+- a landing page
+- on top of landing page, user will see logo, menu with categories, search input, cart menu, user profile menu
+- user has option to view website in different languages.
+- on landing page user can see different sections with slider
+- these sections will show different items available on the website
+- landing page will also show different categories to the user
+- user can click on the category and see a list of items available in the category
+- on category click, user will navigate to the items list page
+- on items list page, user will see list of items, and can apply filters on them, to narrow the search
+- there are different filters available on the website, like: style, medium, size, price, artist etc.
+- user can click to the item, to view it in more details on single item page
+- or the user can click the heart icon, to add it in the list of wishlist specific to the user
+- user can also directly add the item in cart, the item will then be available in user specific cart
+- on single item page, user can see item images, there will be multiple images available for user
+- on single item page, user can see item in more details, description, artist, and other item specific information.
+- on single item page, user can also see reviews on the item, submitted by other users
+- user can see artist name with the item, and can navigate to artist profile page, where all items from the artist can be seen.
+- after adding items on the cart, user can navigate to the checkout page
+- for checking out, user will need to login or register, user can create account with email password, or can login through facebook. on create account solve a small captcha. and user email will be verified through email verification.
+- after the user logged in, user can apply valid coupon
+- on the checkout page, user will see total amount, including other amounts as well, like delivery charges or other.
+- user will enter shipping address, shipping address will get saved for future uses.
+- after checking out, user will be able to pay through debit card/bank account or cash on delivery.
+- user order will be saved in the specific user order history.
+- user can see order from the order history page, user will be able to track the order status through the order history page.
+- user can subscribe for newsletter.
 
-- artist profile management
-  - admin can add items in artist profile
-  - show all artist items on the profile
+### AdminApp Features
 
-- list items
-  - list items from different categories
-  - view single item
+- admin will see a dashboard, with different data.
+- admin will have different menus on the sidebar, for different features.
+- admin can see list of all users, and can block any user account.
+- admin can create/update/delete artists, categories, items and other useful things
+- admin can see list of orders, can see order details, and update order status
+- admin can create promotions, sales, promo codes etc
+- admin can see all reviews submitted by the user, and can approve those reviews, approved reviews will be shown on the website only.
+- admin can also add custom client diary, these will be shown on the website as well.
+- admin has option, to post announcement that will be shown on every page on the website
 
-- order management
-  - user place order (order cycle, order status to be shown)
-  - payment to be made through stripe
-  - user order history
-  - manage shipping for the order
-  - order/user specific shipping address.
-  - save shipping address for future orders.
-  - stripe to be implemented to collect payment, keep stripe payment id on db, and manage order status
+## Specific feature details
 
-- item categories management
-  - add/update/delete categories
+### User account creation process
 
-- item style management
-  - add/update/delete item styles
+- User need an account to place an order.
+- to create account user have 2 options
+- option 1
+  - (Login with Email, Password)
+  - User can click Register link to go on the register page
+  - on registration page, there will be a form with (first name, last name, email, password)
+  - after filling the form, user will have to solve a captcha for verification
+  - after the captcha is solved, user can click on Register button to create an account.
+  - by default user email is not verified, on account creation an email with a link is sent to the user
+  - user can verify the account by opening the link.
+  - by using the email and password, user can login to the website
+- option 2
+  - (Login through facebook)
+  - user can also login through facebook. in which case user info is taken from Facebook, and saved for future use
 
-- item medium management
-  - add/update/delete item mediums
+### User account management process
 
-- admin portal
-  - show users
-  - show order count
-  - show items
-  - show categories management
-  - everything else, admin has access
+- user can update profile information
+- change password, forgot password, change email
+- user can delete account
 
-## Entities
+### Adding item in wishlist process
 
-- User
-  - id
-  - first_name
-  - last_name
-  - email
-  - password_hash
-  - user_type
-  - is_active
+- user can add items in wishlist, the list is specific to the user
+- user need to be logged in to perform this action
+- user can view the wishlist in the profile page
+- user can remove items from wishlist
+- user can add item in wishlist, by clicking on the heart icon, on specific item, the icon is available on single item page and item list page.
 
-- UserWishlist
-  - id
-  - item_id
-  - user_id
+### Item list filter process
 
-- Item
-  - id
-  - title
-  - description
+- user can filter items based on different properties.
+- these filters can be found on item list page
+- filters:
+  - category
+  - style
+  - subject
+  - medium
+  - size
   - price
+  - material
   - orientation
-  - sale_price
-  - user_id
-  - category_id
-  - size_id
-  - medium_id
-  - style_id
-  - material_id
+  - artist
+- these filters will help user to narrow the search
 
-- ItemImage
-  - id
-  - item_id
-  - image_url
+### Item creation process
 
-- Order
-  - id
-  - user_id
-  - total_amount
-  - order_status
+### User checkout process
 
-- OrderItem
-  - id
-  - order_id
-  - item_id
-  - category_id
-  - size_id
-  - medium_id
-  - style_id
-  - price
+### Place order process
 
-- Category
-  - id
-  - name
-  - is_active
+### Create coupon process
 
-- Size
-  - id
-  - name
-  - is_active
+### Create promotion process
 
-- Style
-  - id
-  - name
-  - is_active
+### Client diary create process
 
-- Medium
-  - id
-  - name
-  - is_active
+## Screens
 
-- Material
-  - id
-  - name
-  - is_active
+### MainApp screens
+
+- landing page (first page)
+- item list page (show list of items, with filters)
+- single item page
+- artist profile page
+- checkout page
+- order history page
+- wishlist page
+- user profile page (update user profile data)
+
+### AdminApp screen
+
+- dashboard
+- user list, user view
+- item list, item create/update
+- category list, category create/update
+- artist list, artist create/update
+- order list, order view/update status
+- coupon list, coupon create/update
+- promotion list, promotion create/update
+- announcement list, announcement create/update
+- newsletter subscriber list, create/schedule email newsletter for users.
+- client diary list, client diary list create/update
