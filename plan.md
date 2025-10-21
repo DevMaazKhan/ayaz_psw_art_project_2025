@@ -96,15 +96,67 @@
 
 ### Item creation process
 
+- only admins can create/edit remove items
+- to create items admin can navigate to items menu on admin panel
+- on the item creation form there will be a form
+- form will contain, different items field
+- after filling the form. admin can save the item
+- item save request will be sent to the backend, where new id for the item is generated
+- slug for the item is generated, and item is saved with all item fields on db.
+- after that admin can edit or delete any item
+
 ### User checkout process
+
+- user can checkout through credit/debit cards, or local bank transfer
+- local bank transfer will be verified through whatsapp.
+- once the payment is verified manually through whatsapp, admin through the admin panel, can update order status
 
 ### Place order process
 
+- after user have added items in their cart, they can proceed to place order
+- order can be placed by filling required order form
+- user needs to be logged in, to place order
+- user will select a shipping address and payment method
+- there are 2 types of payment methods debit/credit cards (handled through stripe) or local bank transfer
+- local bank transfer will be verified through whatsapp.
+- once the payment is verified manually through whatsapp, admin through the admin panel, can update order status
+- user will receive updates of order through email.
+- user can track the order, once the order is shipped.
+- to track the order, we will use external services like TCS tracking ID.
+- order details are saved in user order history.
+- shipping details are also saved for future uses.
+- coupons can be applied on orders.
+
 ### Create coupon process
+
+- coupons can be created through admin panel
+- admin will create a coupon with a unique identifier
+- that coupon can be applied to any order
+- coupon can be of different types, like a coupon that gives, 200Rs off, or 10% off
+- admin can enter start date and end date
+- admin can edit/delete coupon
+- in coupon admin can also set, that how many times a coupon can be used, like frequency
 
 ### Create promotion process
 
+- promotions are like sales on website
+- to create sales, admin can navigate to sales menu in admin panel
+- on there admin can select from different types of sales
+- the most basic sale will be, where admin will select items
+- admin can select, multiple items, multiple categories, multiple artists
+- admin will enter start and end date
+- admin can enter sale in amount, like 200Rs off, or in percent, like 10% off
+- after filling the form, admin can submit and the sale will start from that day
+- admin can view/edit/delete promotions
+- in promotions admin can also set, that how many times a promotion can be used, like frequency
+
 ### Client diary create process
+
+- admin from the admin panel will have a menu to upload client diaries
+- to upload client diary, admin will fill a form
+- the form contains, client name, client review, item image, item name
+- after filling the form, request will be sent to the backend, and save in db
+- admin can edit or delete client diary
 
 ## Screens
 
