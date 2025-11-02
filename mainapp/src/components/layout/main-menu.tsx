@@ -64,8 +64,8 @@ const MainMenu = () => {
     <div className="transition-all ease duration-100 fixed top-0 left-0 w-screen h-screen bg-custom text-primary opacity-0 hidden group-[.menu-open]:opacity-100 group-[.menu-open]:block">
       <MenuCloseButton />
 
-      <div className="p-16">
-        <div className="uppercase text-5xl font-bold leading-14 group/menu-list opacity-0 delay-700 group-[.menu-open]:opacity-100 transition-all ease-in-out duration-200">
+      <div className="p-16 animate-menu-fade-in">
+        <div className="uppercase text-5xl font-bold leading-14 group/menu-list">
           {menuList.map((menu) => (
             <MenuItem key={menu.id} {...menu} />
           ))}

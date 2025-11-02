@@ -42,6 +42,16 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --color-custom: var(--custom-color);
+
+  --animate-menu-fade-in: menu-fade-in 1s ease-in-out both;
+  @keyframes menu-fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
+  }
 }
 
 :root {
