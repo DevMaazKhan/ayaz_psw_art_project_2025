@@ -1,8 +1,9 @@
 # Requirements
 
 - app to be multi-lingual
-- primary color: #D97706
-- white color: #FAFAF8
+- primary color: #FDECD8
+- white color: #ffffff
+- black color: #261C15
 
 ## Main Features
 
