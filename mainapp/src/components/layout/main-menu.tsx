@@ -61,10 +61,10 @@ const SocialItem = (props: { id: number; name: string; link: string }) => {
 
 const MainMenu = () => {
   return (
-    <div className="transition-all ease duration-100 fixed top-0 left-0 w-screen h-screen bg-custom text-primary opacity-0 hidden group-[.menu-open]:opacity-100 group-[.menu-open]:block">
+    <div className="z-10 transition-all ease duration-100 fixed top-0 left-0 w-screen h-screen bg-custom text-primary opacity-0 hidden group-[.menu-open]:opacity-100 group-[.menu-open]:block">
       <MenuCloseButton />
 
-      <div className="p-16 animate-menu-fade-in">
+      <div className="p-16 animate-fade-in">
         <div className="uppercase text-5xl font-bold leading-14 group/menu-list">
           {menuList.map((menu) => (
             <MenuItem key={menu.id} {...menu} />

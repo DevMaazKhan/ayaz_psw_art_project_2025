@@ -43,13 +43,25 @@
   --radius-xl: calc(var(--radius) + 4px);
   --color-custom: var(--custom-color);
 
-  --animate-menu-fade-in: menu-fade-in 1s ease-in-out both;
-  @keyframes menu-fade-in {
+  --animate-fade-in: fade-in 1s ease-in-out both;
+  --animate-fade-in-up: fade-in-up 1s ease-in-out both;
+
+  @keyframes fade-in {
     0% {
       opacity: 0;
     }
     100% {
-      opacity: 100;
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }
