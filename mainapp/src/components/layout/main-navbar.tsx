@@ -1,11 +1,12 @@
 import Icon from "../ui/icon";
-import MenuOpenButton from "./main-menu-open-btn";
+import MenuOpenButton from "./menu/main-menu-open-btn";
+import SearchOpenButton from "./search/search-open-btn";
 
 const MainNavbar = () => {
   return (
-    <div className="flex items-center justify-between p-4">
+    <div className="flex items-center justify-between p-4 sticky top-0 left-0 bg-white z-10">
       <div>
-        <Icon name="search" size={34} />
+        <SearchOpenButton />
       </div>
 
       <div className="flex items-center gap-6">

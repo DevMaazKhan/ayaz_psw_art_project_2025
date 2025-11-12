@@ -59,10 +59,10 @@ const SocialItem = (props: { id: number; name: string; link: string }) => {
   );
 };
 
-const MainMenu = () => {
+const MainMenu = ({ isIntercepted }: Readonly<{ isIntercepted: boolean }>) => {
   return (
-    <div className="z-10 transition-all ease duration-100 fixed top-0 left-0 w-screen h-screen bg-custom text-primary opacity-0 hidden group-[.menu-open]:opacity-100 group-[.menu-open]:block">
-      <MenuCloseButton />
+    <section className="z-10 transition-all ease duration-100 fixed top-0 left-0 w-screen h-screen bg-custom text-primary">
+      <MenuCloseButton isIntercepted={isIntercepted} />
 
       <div className="p-16 animate-fade-in">
         <div className="uppercase text-5xl font-bold leading-14 group/menu-list">
@@ -76,7 +76,7 @@ const MainMenu = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
