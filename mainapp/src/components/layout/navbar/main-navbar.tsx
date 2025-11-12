@@ -1,6 +1,7 @@
-import Icon from "../ui/icon";
-import MenuOpenButton from "./menu/main-menu-open-btn";
-import SearchOpenButton from "./search/search-open-btn";
+import Icon from "../../ui/icon";
+import MenuOpenButton from "../menu/main-menu-open-btn";
+import SearchOpenButton from "../search/search-open-btn";
+import NavbarLogo from "./main-navbar-logo";
 
 const MainNavbar = () => {
   return (
@@ -8,6 +9,8 @@ const MainNavbar = () => {
       <div>
         <SearchOpenButton />
       </div>
+
+      <NavbarLogo />
 
       <div className="flex items-center gap-6">
         <Icon name="user" size={34} />

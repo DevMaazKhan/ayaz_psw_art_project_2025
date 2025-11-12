@@ -1,4 +1,4 @@
-import Navbar from "@/components/layout/main-navbar";
+import Navbar from "@/components/layout/navbar/main-navbar";
 import React from "react";
 
 const MainLayout = ({

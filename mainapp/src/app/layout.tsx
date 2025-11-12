@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${montserrat.className} ${oswald.className}`}>
+      <body className={`group ${montserrat.className} ${oswald.className}`} id="main">
         {children}
       </body>
     </html>
