@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Icon from "../../ui/icon";
+import { useEffect } from "react";
 
 const MainMenuCloseButton = ({
   isIntercepted,
@@ -16,10 +17,18 @@ const MainMenuCloseButton = ({
     }
   }
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   return (
     <div className="w-full flex justify-end items-center p-4">
       <div onClick={onMenuCloseHandler}>
-        <Icon name="cancel" size={44} strokeWidth={1} />
+        <Icon name="cancel" size={34} strokeWidth={1} />
       </div>
     </div>
   );

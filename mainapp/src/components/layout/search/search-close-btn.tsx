@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Icon from "../../ui/icon";
 import { useRouter } from "next/navigation";
 
@@ -16,10 +17,18 @@ const SearchCloseButton = ({
     }
   }
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   return (
-    <div className="w-full flex justify-end items-center p-4">
+    <div className="w-full flex justify-end items-center p-4 pr-4">
       <div onClick={onCloseHandler}>
-        <Icon name="cancel" size={44} strokeWidth={1} />
+        <Icon name="cancel" size={34} strokeWidth={1} />
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/footer/main-footer";
 import Navbar from "@/components/layout/navbar/main-navbar";
 import React from "react";
 
@@ -10,6 +11,7 @@ const MainLayout = ({
       <Navbar />
       {children}
       {modal}
+      <Footer />
     </main>
   );
 };
