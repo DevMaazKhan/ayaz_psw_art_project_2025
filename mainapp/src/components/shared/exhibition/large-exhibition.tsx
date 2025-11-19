@@ -1,6 +1,7 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import dayjs from "dayjs";
 import Image from "next/image";
+import RenderTitle from "../other/render-title";
 
 interface ILargeExhibitionProps {
   image: string | StaticImport;
@@ -26,12 +27,7 @@ const LargeExhibition = (props: ILargeExhibitionProps) => {
       <article className="w-7/12 mx-auto px-3.5">
         <span className="text-lg font-bold mb-1.5">ON VIEW</span>
         <h2 className="text-7xl font-bold mb-6">
-          {props.name
-            .split(" ")
-            .slice(0, -1)
-            .map((el) => `${el} `)}
-          <br />
-          <span className="text-black/30">{props.name.split(" ").pop()}</span>
+          <RenderTitle title={props.name} />
         </h2>
         <div className="mb-6">
           <span className="font-[montserrat] text-lg font-medium">

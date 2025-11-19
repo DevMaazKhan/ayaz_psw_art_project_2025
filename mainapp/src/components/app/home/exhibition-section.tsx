@@ -5,7 +5,7 @@ const ExhibitionSection = () => {
   return (
     <section className="max-w-360 mx-auto px-5 opacity-0 animate-fade-in-up mb-22">
       <LargeExhibition 
-        name="Richard Misrach Rewind"
+        name="Richard Misrach: Rewind"
         description="Selections spanning five decades, from the artist’s most recent series to his first."
         image={headerImage}
         startDate={new Date()}
