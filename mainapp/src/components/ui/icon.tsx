@@ -1,4 +1,5 @@
 import {
+  ArrowLeft,
   LucideProps,
   SearchIcon,
   ShoppingCartIcon,
@@ -8,7 +9,7 @@ import {
 } from "lucide-react";
 import { MouseEvent, ReactNode } from "react";
 
-type IconName = "search" | "user" | "shopping-cart" | "menu" | "cancel";
+type IconName = "search" | "user" | "shopping-cart" | "menu" | "cancel" | "left-arrow";
 
 type IconProps = {
   name: IconName;
@@ -45,6 +46,9 @@ const Icon = (props: Readonly<IconProps>) => {
     case "cancel":
       Comp = <XIcon {...iconProps} />;
       break;
+    case "left-arrow":
+      Comp = <ArrowLeft {...iconProps} />;
+      break
     default:
       Comp = null;
       break;
