@@ -1,3 +1,8 @@
 // Header
-
 export const HEADER_TITLE = "BANDAH ALI";
+
+// ADMIN LOGIN FORM
+export const ADMIN_LOGIN_FORM_USERNAME_FIELD_LABEL = "Username";
+export const ADMIN_LOGIN_FORM_USERNAME_FIELD_PLACEHOLDER = "Enter Username";
+export const ADMIN_LOGIN_FORM_PASSWORD_FIELD_LABEL = "Password";
+export const ADMIN_LOGIN_FORM_PASSWORD_FIELD_PLACEHOLDER = "Enter Password";

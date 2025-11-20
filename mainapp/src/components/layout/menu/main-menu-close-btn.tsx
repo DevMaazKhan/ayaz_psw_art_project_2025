@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import Icon from "../../ui/icon";
 import { useEffect } from "react";
+import { PATH } from "@/lib/constant/path";
 
 const MainMenuCloseButton = ({
   isIntercepted,
@@ -13,7 +14,7 @@ const MainMenuCloseButton = ({
     if (isIntercepted) {
       router.back();
     } else {
-      router.push("/");
+      router.push(PATH.LANDING_PAGE);
     }
   }
 

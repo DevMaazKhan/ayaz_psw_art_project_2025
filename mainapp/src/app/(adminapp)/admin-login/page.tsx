@@ -1,4 +1,4 @@
-import AdminLoginForm from "@/components/app/admin-login/login-form";
+import AdminLoginForm from "@/components/app/admin-login/admin-login-form";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,13 +9,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { PATH } from "@/lib/constant/path";
 import Link from "next/link";
 
 const AdminLoginPage = () => {
   return (
     <div>
       <div className="font-[montserrat] px-7 py-5">
-        <Link href="/">
+        <Link href={PATH.LANDING_PAGE}>
           <Button variant="link">
             <Icon name="left-arrow" />
             Back to site
@@ -34,7 +35,9 @@ const AdminLoginPage = () => {
           <AdminLoginForm />
         </CardContent>
         <CardFooter>
-          <Button className="w-full" type="submit" form="admin-login-form">Login</Button>
+          <Button className="w-full" type="submit" form="admin-login-form">
+            Login
+          </Button>
         </CardFooter>
       </Card>
     </div>

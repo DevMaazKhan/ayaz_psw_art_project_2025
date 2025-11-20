@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Icon from "../../ui/icon";
 import { useRouter } from "next/navigation";
+import { PATH } from "@/lib/constant/path";
 
 const SearchCloseButton = ({
   isIntercepted,
@@ -13,7 +14,7 @@ const SearchCloseButton = ({
     if (isIntercepted) {
       router.back();
     } else {
-      router.push("/");
+      router.push(PATH.LANDING_PAGE);
     }
   }
 
